@@ -41,5 +41,28 @@ module.exports = {
         ignoreAtRules: ['tailwind'],
       },
     ],
+
+    //
+    // stylelint
+    // https://stylelint.io/user-guide/rules/list
+    //
+
+    // Specify camel case convention for keyframe names
+    // https://stylelint.io/user-guide/rules/list/keyframes-name-pattern
+    'keyframes-name-pattern': [
+      '^[a-z][a-zA-Z0-9]+$',
+      {
+        message: 'Expected keyframe name to be in camelCase',
+      },
+    ],
+
+    // Specify camel case convention for class selectors
+    // https://stylelint.io/user-guide/rules/list/selector-class-pattern
+    'selector-class-pattern': [
+      '^[a-z][a-zA-Z0-9]+$',
+      {
+        message: 'Expected class selector to be in camelCase',
+      },
+    ],
   },
 }
