@@ -21,10 +21,6 @@ const Home: NextPage = () => {
           Get started by editing <code className={styles.code}>pages/index.tsx</code>
         </p>
 
-        <div className="ml-4 flex h-24 border-2 border-gray-300 p-3 text-gray-700 shadow-md">
-          asdasd
-        </div>
-
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
