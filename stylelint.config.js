@@ -23,6 +23,7 @@ module.exports = {
     'stylelint-use-nesting',
   ],
   rules: {
+    'declaration-block-no-duplicate-properties': true,
     // Requires nesting where applicable
     'csstools/use-nesting': 'always',
 
