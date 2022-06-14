@@ -1,0 +1,7 @@
+.root {
+  @apply bg-slate-900 text-slate-400
+}
+
+.innerContainer {
+  @apply container mx-auto;
+}
