@@ -3,5 +3,9 @@
 }
 
 .innerContainer {
-  @apply container mx-auto;
+  margin: 0 auto;
+
+  @media(--x-large-bp) {
+    max-width: 80rem;
+  }
 }

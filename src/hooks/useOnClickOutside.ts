@@ -9,14 +9,10 @@ export const useOnClickOutside = (
   useEffect(
     () => {
       const listener = (event: EventType) => {
-        console.log(ref)
-
         // Do nothing if clicking ref's element or descendent elements
         if (!ref.current || ref.current.contains(event.target as Node)) {
           return
         }
-
-        console.log('passed')
 
         handler(event)
       }
