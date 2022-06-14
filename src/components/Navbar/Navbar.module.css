@@ -1,0 +1,50 @@
+@import "../../styles/_settings.css";
+
+.navbar {
+  @apply flex;
+}
+
+.navContainer {
+  @apply text-slate-400 bg-slate-800;
+
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  padding-top: 3.125rem;
+  margin: 1.25rem 0;
+  margin-top: 0;
+  transform: translateX(-50vw);
+
+  & li {
+    padding:0.625rem 0.75rem;
+    list-style-type: none;
+
+    &:hover, &:focus {
+      @apply bg-slate-500;
+    }
+  }
+}
+
+.navContainerOpened {
+  transition: .5s ease-in-out;
+  transform: translate(0);
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+    transform: translate(0)
+  }
+}
+
+.navContainerClosed {
+  transition: .5s ease-in-out;
+  transform: translate(-100vw);
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+    transform: translate(-100vw)
+  }
+}
+
+.navbarItem {
+  @apply cursor-pointer;
+}
