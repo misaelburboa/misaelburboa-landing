@@ -1,7 +1,10 @@
 module.exports = {
   extends: [
-    'stylelint-config-standard-scss',
-    'stylelint-config-prettier-scss',
+    // https://www.npmjs.com/package/stylelint-config-standard
+    'stylelint-config-standard',
+
+    // https://github.com/prettier/stylelint-config-prettier
+    'stylelint-config-prettier',
 
     // https://www.npmjs.com/package/stylelint-a11y
     'stylelint-a11y/recommended',
