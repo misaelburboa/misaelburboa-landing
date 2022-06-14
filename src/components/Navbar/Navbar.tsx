@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { useRef, useState } from 'react'
+import { useRef, useState, AnimationEvent } from 'react'
 import styles from './Navbar.module.css'
 import { useOnClickOutside } from '@/hooks/useOnClickOutside'
 
@@ -20,6 +20,8 @@ const HamburgerIcon: React.FC<Props> = ({ isOpen }) => {
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const overlayRef = useRef<HTMLDivElement>(null)
+
   const ref = useRef<HTMLElement>(null)
   useOnClickOutside(ref, () => setIsOpen(false))
 
@@ -27,8 +29,23 @@ export const Navbar = () => {
     setIsOpen(!isOpen)
   }
 
+  const handleAnimationEndEvent = (e: AnimationEvent<HTMLDivElement>) => {
+    if (!overlayRef.current) {
+      return
+    }
+
+    if (e.animationName === styles.fadeOut) {
+      overlayRef.current.className = styles.overlayClosed
+    }
+  }
+
   return (
     <nav className={styles.navbar} id="mb-navbar" onClick={toggleMenu} ref={ref}>
+      <div
+        className={clsx(isOpen ? styles.overlayOpen : styles.overlayClosing)}
+        onAnimationEnd={handleAnimationEndEvent}
+        ref={overlayRef}
+      ></div>
       <ul
         className={clsx(
           styles.navContainer,
