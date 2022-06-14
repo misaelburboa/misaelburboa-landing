@@ -1,8 +1,21 @@
-import { HamburgerMenu } from '@/components/HamburgerMenu'
 import clsx from 'clsx'
 import { useRef, useState } from 'react'
 import styles from './Navbar.module.css'
 import { useOnClickOutside } from '@/hooks/useOnClickOutside'
+
+interface Props {
+  isOpen: boolean
+}
+
+const HamburgerIcon: React.FC<Props> = ({ isOpen }) => {
+  return (
+    <div className={styles.hamburger}>
+      <div className={clsx(styles.burger, isOpen ? styles.burger1Opened : styles.burger1Closed)} />
+      <div className={clsx(styles.burger, isOpen ? styles.burger2Opened : styles.burger2Closed)} />
+      <div className={clsx(styles.burger, isOpen ? styles.burger3Opened : styles.burger3Closed)} />
+    </div>
+  )
+}
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,7 +45,7 @@ export const Navbar = () => {
         <li className={styles.navbarItem}>Contact</li>
       </ul>
       <div>
-        <HamburgerMenu isOpen={isOpen} />
+        <HamburgerIcon isOpen={isOpen} />
       </div>
     </nav>
   )
