@@ -1,7 +1,9 @@
 import clsx from 'clsx'
-import { useRef, useState, AnimationEvent } from 'react'
-import styles from './Navbar.module.css'
+import { AnimationEvent, useRef, useState } from 'react'
+
 import { useOnClickOutside } from '@/hooks/useOnClickOutside'
+
+import styles from './Navbar.module.css'
 
 interface Props {
   isOpen: boolean

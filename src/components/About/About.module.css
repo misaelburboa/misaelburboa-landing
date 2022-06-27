@@ -1,0 +1,103 @@
+@import '../../styles/_settings.css';
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+  
+  @media(--medium-bp) {
+    padding-top: 1.5rem;
+  }
+  
+  @media(--large-bp) {
+    flex-direction: row;
+  }
+}
+
+.picture {
+  display: none;
+
+  @media(--medium-bp) {
+    display: block;
+    width: 21.875rem;
+    height: 18.75rem;
+    margin: 0 auto 1rem;
+    background-color: gray;
+  }
+  
+  @media(--large-bp) {
+    width: 31.25rem;
+    height: 31.25rem;
+    margin-right: 2rem;
+  }
+}
+
+.titleContainer {
+  @media(--medium-bp) {
+    position: relative;
+    min-height: 5rem;
+  }
+}
+
+.aboutHeadline {
+  z-index: 2;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+
+  @media(--medium-bp) {
+    font-size: 3.125rem;
+  }
+}
+
+.aboutHeadlineBackground {
+  display: none;
+  @media(--medium-bp) { 
+    position: absolute;
+    top: -0.625rem;
+    z-index: 1;
+    display: block;
+    margin-top:;
+    font-size: 4.81rem;
+    font-weight: 700;
+    user-select: none;
+    opacity: 0.18;
+  }
+}
+
+.description {
+  margin-top: 2.25rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.infoList {
+  margin-top: 1.25rem;
+  @media(--medium-bp) {
+    margin-top: 3rem;
+  }
+}
+
+.infoPropContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.infoProp {
+  display: flex;
+  flex-direction: row;
+  min-width: 7.5rem;
+  margin: 0 0 0.9375rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #bb4600;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}

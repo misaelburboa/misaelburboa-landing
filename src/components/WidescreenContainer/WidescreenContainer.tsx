@@ -1,5 +1,6 @@
-import styles from './WidescreenContainer.module.css'
 import React from 'react'
+
+import styles from './WidescreenContainer.module.css'
 
 interface WidescreenContainerProps {
   children: React.ReactNode

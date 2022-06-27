@@ -70,6 +70,8 @@
   @apply text-slate-400 bg-slate-800;
 
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: 9;
   width: 50vw;
   height: 100vh;
