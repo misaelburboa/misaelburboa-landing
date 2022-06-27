@@ -7,11 +7,12 @@ import styles from './Navbar.module.css'
 
 interface Props {
   isOpen: boolean
+  toggleMenu: () => void
 }
 
-const HamburgerIcon: React.FC<Props> = ({ isOpen }) => {
+const HamburgerIcon: React.FC<Props> = ({ isOpen, toggleMenu }) => {
   return (
-    <div className={styles.hamburger}>
+    <div className={styles.hamburger} onClick={() => toggleMenu()}>
       <div className={clsx(styles.burger, isOpen ? styles.burger1Opened : styles.burger1Closed)} />
       <div className={clsx(styles.burger, isOpen ? styles.burger2Opened : styles.burger2Closed)} />
       <div className={clsx(styles.burger, isOpen ? styles.burger3Opened : styles.burger3Closed)} />
@@ -42,7 +43,7 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className={styles.navbar} id="mb-navbar" onClick={toggleMenu} ref={ref}>
+    <nav className={styles.navbar} id="mb-navbar" ref={ref}>
       <div
         className={clsx(isOpen ? styles.overlayOpen : styles.overlayClosing)}
         onAnimationEnd={handleAnimationEndEvent}
@@ -64,7 +65,7 @@ export const Navbar = () => {
         <li className={styles.navbarItem}>Contact</li>
       </ul>
       <div>
-        <HamburgerIcon isOpen={isOpen} />
+        <HamburgerIcon isOpen={isOpen} toggleMenu={toggleMenu} />
       </div>
     </nav>
   )
