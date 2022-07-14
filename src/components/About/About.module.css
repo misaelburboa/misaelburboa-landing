@@ -93,11 +93,33 @@
   margin: 0 0 0.9375rem;
   font-size: 1rem;
   font-weight: 700;
-  color: #bb4600;
+  color: #00c3ff;
 }
 
 .link {
   display: inline-block;
   margin-top: 2rem;
   font-size: 1.5rem;
+}
+
+@keyframes fadeInUpMenu {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUpMenu 500ms forwards;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    animation: none
+  }
 }

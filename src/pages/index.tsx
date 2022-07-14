@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { About } from '@/components/About'
 import * as Carousel from '@/components/Carousel'
 import { Navbar } from '@/components/Navbar'
+import { Resume } from '@/components/Resume'
 import { WidescreenContainer } from '@/components/WidescreenContainer'
 
 import styles from '../styles/Home.module.css'
@@ -26,6 +27,8 @@ const Home: NextPage = () => {
 
         <main>
           <About />
+
+          <Resume />
         </main>
 
         <footer className={styles.footer}>Here Goes the Footer</footer>

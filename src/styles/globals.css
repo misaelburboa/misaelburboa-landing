@@ -13,7 +13,7 @@ a {
   color: inherit;
   
   &:hover, &:active, &:focus {
-    color: #bb4600;
+    color: #00c3ff;
   }
 }
 

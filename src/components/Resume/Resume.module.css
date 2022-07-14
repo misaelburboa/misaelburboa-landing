@@ -1,0 +1,73 @@
+@import "../../styles/_settings.css";
+
+.titleContainer {
+  margin-top: 3rem;
+
+  @media(--medium-bp) {
+    position: relative;
+    width: 100%;
+    min-height: 5rem;
+    margin: 9rem auto 0;
+    text-align:center;
+  }
+}
+
+.headline {
+  z-index: 2;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+
+  @media(--medium-bp) {
+    font-size: 3.125rem;
+  }
+}
+
+.headlineBackground {
+  display: none;
+  @media(--medium-bp) { 
+    position: absolute;
+    top: -0.625rem;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    margin-top:;
+    font-size: 4.81rem;
+    font-weight: 700;
+    user-select: none;
+    opacity: 0.18;
+  }
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+
+  @media(--medium-bp) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@keyframes fadeInUpMenu {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUpMenu 500ms forwards;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    animation: none
+  }
+}
