@@ -1,0 +1,13 @@
+@keyframes fadeInUpMenu {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+  }
+}

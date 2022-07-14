@@ -1,3 +1,4 @@
+@import '../../styles/_animations.css';
 @import '../../styles/_settings.css';
 
 .root {
@@ -100,20 +101,6 @@
   display: inline-block;
   margin-top: 2rem;
   font-size: 1.5rem;
-}
-
-@keyframes fadeInUpMenu {
-  from {
-    visibility: hidden;
-    opacity: 0;
-    transform: translate3d(0, 1.25rem, 0);
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-    transform: none;
-  }
 }
 
 .fadeInUp {
