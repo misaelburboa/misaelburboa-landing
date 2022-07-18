@@ -1,6 +1,10 @@
 @import "../../styles/_animations.css";
 @import "../../styles/_settings.css";
 
+.root {
+  margin-top: 3rem;
+}
+
 .titleContainer {
   margin-top: 3rem;
 
@@ -41,13 +45,33 @@
 }
 
 .cardsContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   margin-top: 3rem;
 
   @media(--medium-bp) {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+  }
+}
+
+.skillsCard {
+  flex-basis: 45%;
+  margin-bottom: 2rem;
+}
+
+.cardTitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.625rem;
+  color: #898bff;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin-bottom: 0.9375rem;
   }
 }
 
@@ -57,24 +81,4 @@
   @media screen and (prefers-reduced-motion: reduce) {
     animation: none
   }
-}
-
-.cardDate {
-  font-size: 1.625rem;
-  font-weight: 700;
-  color: #00c3ff;
-}
-
-.cardTitle {
-  font-size: 1.625rem;
-  color: #898bff;
-}
-
-.cardSubtitle {
-  font-size: 0.75rem;
-}
-
-.cardDescription {
-  font-size: 1rem;
-  line-height: 1.8;
 }

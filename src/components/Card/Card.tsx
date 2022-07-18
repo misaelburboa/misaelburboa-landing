@@ -1,15 +1,28 @@
+import clsx from 'clsx'
+
 import styles from './Card.module.css'
 
-export const Card = () => {
-  return (
-    <div className={styles.root}>
-      <div className={styles.date}>2014 - 2015</div>
-      <h2 className={styles.title}>Master Degree of Computer Science</h2>
-      <h4 className={styles.subtitle}>Universidad de Sonora</h4>
-      <p className={styles.description}>
-        aksfhñlksahldfjsñ asldfh asñdfjh añsdjsñafkadhjsf ñadssd sja dfñahjsd fñahsdfh asdñkh asd
-        fñahjsd ñfahjsd f
-      </p>
-    </div>
-  )
+interface CardProps {
+  children: React.ReactNode
+  className?: string
+}
+
+export const Card: React.FC<CardProps> = ({ children, className }) => {
+  return <div className={clsx(className, styles.root)}>{children}</div>
+}
+
+interface TitleProps {
+  children: React.ReactNode
+  className?: string
+}
+export const Title: React.FC<TitleProps> = ({ children, className }) => {
+  return <h2 className={className}>{children}</h2>
+}
+
+interface ContentProps {
+  children: React.ReactNode
+  className?: string
+}
+export const Content: React.FC<ContentProps> = ({ children, className }) => {
+  return <div className={className}>{children}</div>
 }

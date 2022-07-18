@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 
-import { Card } from '@/components/Card'
+import { Card, Content, Title } from '@/components/Card'
 
 import styles from './Resume.module.css'
 
@@ -23,16 +23,17 @@ export const Resume = () => {
     }
   })
   return (
-    <div className="resume" ref={resumeRef}>
+    <div ref={resumeRef}>
       <div className={styles.titleContainer}>
         <h1 className={styles.headline}>Resume</h1>
         <h2 className={styles.headlineBackground}>Resume</h2>
       </div>
       <div className={styles.cardsContainer}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card>
+          <div className={styles.cardDate}>2014 - 2015</div>
+          <Title className={styles.cardTitle}>Master Degree of Computer Science</Title>
+          <Content className={styles.cardDescription}>ALksjdlaksjdkalsjflaksjflkasjf</Content>
+        </Card>
       </div>
     </div>
   )

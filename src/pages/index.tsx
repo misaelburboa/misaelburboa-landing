@@ -5,6 +5,7 @@ import { About } from '@/components/About'
 import * as Carousel from '@/components/Carousel'
 import { Navbar } from '@/components/Navbar'
 import { Resume } from '@/components/Resume'
+import { Skills } from '@/components/Skills'
 import { WidescreenContainer } from '@/components/WidescreenContainer'
 
 import styles from '../styles/Home.module.css'
@@ -29,9 +30,9 @@ const Home: NextPage = () => {
           <About />
 
           <Resume />
-        </main>
 
-        <footer className={styles.footer}>Here Goes the Footer</footer>
+          <Skills />
+        </main>
       </div>
     </WidescreenContainer>
   )

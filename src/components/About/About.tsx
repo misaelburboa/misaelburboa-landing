@@ -7,8 +7,8 @@ export const About = () => {
       <div>
         <div className={styles.fadeInUp}>
           <div className={styles.titleContainer}>
-            <h1 className={styles.aboutHeadline}>About Me</h1>
-            <h2 className={styles.aboutHeadlineBackground}>Misael Burboa</h2>
+            <h1 className={styles.aboutHeadline}>Misael Burboa</h1>
+            <h2 className={styles.aboutHeadlineBackground}>About Me</h2>
           </div>
           <p className={styles.description}>
             I&apos;m a web developer I&apos;m currently focused more in front end, but love working
