@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import { About } from '@/components/About'
 import * as Carousel from '@/components/Carousel'
@@ -15,9 +16,27 @@ const Home: NextPage = () => {
     <WidescreenContainer>
       <Navbar />
       <Carousel.Container>
-        <Carousel.Item>Item 1</Carousel.Item>
-        <Carousel.Item>Item 2</Carousel.Item>
-        <Carousel.Item>Item 3</Carousel.Item>
+        <Carousel.Item>
+          <Image
+            alt="frontend development"
+            src="/images/Front-end-Development.jpeg"
+            layout="fill"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image
+            alt="frontend development"
+            src="/images/Front-end-Development.jpeg"
+            layout="fill"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image
+            alt="frontend development"
+            src="/images/Front-end-Development.jpeg"
+            layout="fill"
+          />
+        </Carousel.Item>
       </Carousel.Container>
       <div className={styles.container}>
         <Head>

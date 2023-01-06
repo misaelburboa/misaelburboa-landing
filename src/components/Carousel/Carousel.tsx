@@ -18,7 +18,7 @@ export const Item: React.FC<ItemProps> = ({ children, width }) => {
 }
 
 interface CarouselProps {
-  children: React.ReactElement[]
+  children: React.ReactElement[] | React.ReactElement
 }
 export const Container: React.FC<CarouselProps> = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0)
