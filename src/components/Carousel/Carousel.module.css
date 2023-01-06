@@ -1,4 +1,7 @@
+@import '../../styles/_settings.css';
+
 .carousel {
+  position: relative;
   overflow: hidden;
 }
 
@@ -8,15 +11,56 @@
 
   @media screen and (prefers-reduced-motion: reduce) {
     white-space: nowrap;
-    transition: none
+    transition: none;
   }
 }
 
 .carouselItem {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 25rem;
   color: #fff;
-  background-color: blue;
+  background-color: transparent;
+}
+
+.carouselControl {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+}
+
+.carouselPrevButton {
+  left: 0;
+
+  @media (--medium-bp) {
+    left: 2rem;
+  }
+}
+
+.carouselNextButton {
+  right: 0;
+
+  @media (--medium-bp) {
+    right: 2rem;
+  }
+}
+
+.navigationBar {
+  display: flex;
+  grid-column-gap: 1rem;
+  justify-content: center;
+}
+
+.navigationDot {
+  position: relative;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #273044;
+  border-radius: 50%;
+}
+
+.active {
+  background-color: #94a3b8;
 }

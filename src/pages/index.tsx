@@ -9,35 +9,26 @@ import { Resume } from '@/components/Resume'
 import { Skills } from '@/components/Skills'
 import { WidescreenContainer } from '@/components/WidescreenContainer'
 
+import myImage from '../../public/Front-end-Development.jpeg'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
     <WidescreenContainer>
       <Navbar />
+
       <Carousel.Container>
         <Carousel.Item>
-          <Image
-            alt="frontend development"
-            src="/images/Front-end-Development.jpeg"
-            layout="fill"
-          />
+          <Image alt="frontend development" src={myImage} />
         </Carousel.Item>
         <Carousel.Item>
-          <Image
-            alt="frontend development"
-            src="/images/Front-end-Development.jpeg"
-            layout="fill"
-          />
+          <Image alt="frontend development" src={myImage} />
         </Carousel.Item>
         <Carousel.Item>
-          <Image
-            alt="frontend development"
-            src="/images/Front-end-Development.jpeg"
-            layout="fill"
-          />
+          <Image alt="frontend development" src={myImage} />
         </Carousel.Item>
       </Carousel.Container>
+
       <div className={styles.container}>
         <Head>
           <title>Misael Burboa</title>

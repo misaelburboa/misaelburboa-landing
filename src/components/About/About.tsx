@@ -1,9 +1,17 @@
+import Image from 'next/image'
+
 import styles from './About.module.css'
 
 export const About = () => {
   return (
     <div className={styles.root}>
-      <div className={styles.picture}>Picture</div>
+      <Image
+        className={styles.picture}
+        alt="profile picture"
+        src="/profile-pic.jpeg"
+        width="350"
+        height="300"
+      />
       <div>
         <div className={styles.fadeInUp}>
           <div className={styles.titleContainer}>

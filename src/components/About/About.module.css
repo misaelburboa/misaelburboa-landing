@@ -23,15 +23,15 @@
 
   @media(--medium-bp) {
     display: block;
-    width: 21.875rem;
-    height: 18.75rem;
+    width: 18.75rem;
+    height: auto;
     margin: 0 auto 1rem;
     background-color: gray;
   }
   
   @media(--large-bp) {
     width: 31.25rem;
-    height: 31.25rem;
+    height: auto;
     margin-right: 2rem;
   }
 }

@@ -1,7 +1,13 @@
+import clsx from 'clsx'
+import Image from 'next/image'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { useSwipeable } from 'react-swipeable'
 
+import { HiddenVisually } from '@/components/HiddenVisually/HiddenVisually'
+
+import left from '../../../public/chevron-left.svg'
+import right from '../../../public/chevron-right.svg'
 import styles from './Carousel.module.css'
 
 interface ItemProps {
@@ -61,18 +67,33 @@ export const Container: React.FC<CarouselProps> = ({ children }) => {
         onMouseLeave={() => setPaused(false)}
         {...handlers}
       >
+        <button
+          className={clsx(styles.carouselControl, styles.carouselPrevButton)}
+          onClick={() => updateIndex(activeIndex - 1)}
+        >
+          <Image alt="" src={left} width="30" />
+        </button>
         <div className={styles.inner} style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
           {React.Children.map(children, (child) => {
             return React.cloneElement(child, { width: '100%' })
           })}
         </div>
+        <button
+          className={clsx(styles.carouselControl, styles.carouselNextButton)}
+          onClick={() => updateIndex(activeIndex + 1)}
+        >
+          <Image alt="" src={right} width="30" />
+        </button>
       </div>
-      <div>
-        <button onClick={() => updateIndex(activeIndex - 1)}>Prev</button>
+      <div className={styles.navigationBar}>
         {React.Children.map(children, (child, index) => {
-          return <button onClick={() => updateIndex(index)}>{index + 1}</button>
+          return (
+            <button onClick={() => updateIndex(index)}>
+              <div className={clsx(styles.navigationDot, index === activeIndex && styles.active)} />
+              <HiddenVisually>Go to slide number {index}</HiddenVisually>
+            </button>
+          )
         })}
-        <button onClick={() => updateIndex(activeIndex + 1)}>Next</button>
       </div>
     </>
   )
